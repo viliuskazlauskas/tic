@@ -1,0 +1,763 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 13:52:31.3385542 UTC
+
+interface tic-0.1.0.0-FOxgNA1UeTn1Zc2Sr49vTD:Moves 8001
+  interface hash: 5bab3b5324c2d5714f802de85ebf222c
+  ABI hash: c33eaeb377f50a1d7f4a66d417a75828
+  export-list hash: 68b2f6958637e2ede184c0c6dc32e4ab
+  orphan hash: 3748a50fab4cc681fd8c83477e135c43
+  flag hash: 365edb496d38399416a64131c77130e2
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Moves.doMove
+  Moves.doMoveDiagonal1
+  Moves.doMoveDiagonal2
+  Moves.doMoveEmpty
+  Moves.doMoveLine
+  Moves.doMoveRow
+  Moves.filterDiagonal1
+  Moves.filterDiagonal2
+  Moves.filterEnemyMoves
+  Moves.filterLine
+  Moves.filterRow
+  Moves.findEnemyMovesDiagonal
+  Moves.findEnemyMovesLine
+  Moves.findEnemyMovesRow
+  Moves.findInDiagonalMove
+  Moves.findInLineMove
+  Moves.findInRowMove
+  Moves.giveMove
+  Moves.giveMoveDiagonal
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 3cbed01c922be29649c33015287c82ca
+import  -/  base-4.9.0.0:Data.List d711f98b49ef5d33e5b3d404631ed073
+import  -/  base-4.9.0.0:Data.OldList 3c899c6d8e6204063769214449ac0954
+import  -/  base-4.9.0.0:GHC.Base dd8044a8d640eee51828c17c476a6ba7
+import  -/  base-4.9.0.0:GHC.Err 20faef8829fd13c027d0ee2213637534
+import  -/  base-4.9.0.0:GHC.List 47d436dfb7454bb1883fb4d943e3f389
+import  -/  base-4.9.0.0:GHC.Num f0aed3315b3ed1b330b71fc4148a5581
+import  -/  base-4.9.0.0:Prelude 2d9cd8b0ec3d728f62b734df888d2e34
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+2ee7adaba4ed0cc5523ad5b6c322e498
+  $s$fEq(,) :: GHC.Classes.Eq (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt) -}
+13f9405142a4d6ebb85ef33c505ad71a
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Moves.$trModule2 Moves.$trModule1) -}
+3f14b266218788acf9e43a1c2279d84c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Moves"#) -}
+9d219da328620c9c7369965236359371
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "tic-0.1.0.0-FOxgNA1UeTn1Zc2Sr49vTD"#) -}
+41453b7b817640c1aeb2f191e995b9fe
+  $wgiveMoveDiagonal ::
+    [GHC.Types.Int]
+    -> GHC.Types.Char
+    -> (# GHC.Types.Int, GHC.Types.Int, GHC.Types.Char #)
+  {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (w :: [GHC.Types.Int]) (w1 :: GHC.Types.Char) ->
+                 case w of wild {
+                   []
+                   -> case Moves.giveMoveDiagonal1
+                      ret_ty (# GHC.Types.Int, GHC.Types.Int, GHC.Types.Char #)
+                      of {}
+                   : x rest
+                   -> let {
+                        m :: [GHC.Types.Int]
+                        = Data.OldList.\\
+                            @ GHC.Types.Int
+                            GHC.Classes.$fEqInt
+                            Moves.doMoveDiagonal5
+                            rest
+                      } in
+                      case GHC.List.$wlenAcc @ GHC.Types.Int m 0# of ww2 {
+                        DEFAULT
+                        -> case Moves.doMoveDiagonal4
+                           ret_ty (# GHC.Types.Int, GHC.Types.Int, GHC.Types.Char #)
+                           of {}
+                        1#
+                        -> let {
+                             x1 :: GHC.Types.Int
+                             = case m of wild1 {
+                                 [] -> GHC.List.badHead @ GHC.Types.Int : x2 ds1 -> x2 }
+                           } in
+                           (# x1,
+                              case x1 of wild1 { GHC.Types.I# y ->
+                              GHC.Types.I# (GHC.Prim.-# 2# y) },
+                              w1 #) } }) -}
+9e8a66da008db6bcb722600892ae49fc
+  doMove ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Char
+    -> [GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 2, Strictness: <S,U><L,U(U)>,
+     Unfolding: (\ (board :: [(GHC.Types.Int, GHC.Types.Int,
+                               GHC.Types.Char)])
+                   (player :: GHC.Types.Char) ->
+                 GHC.Base.++
+                   @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                   (Moves.doMoveLine board Moves.doMoveDiagonal10 player)
+                   (GHC.Base.++
+                      @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                      (Moves.doMoveLine board Moves.doMoveDiagonal9 player)
+                      (GHC.Base.++
+                         @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                         (Moves.doMoveLine board Moves.doMoveDiagonal9 player)
+                         (GHC.Base.++
+                            @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                            (Moves.doMoveRow board Moves.doMoveDiagonal10 player)
+                            (GHC.Base.++
+                               @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                               (Moves.doMoveRow board Moves.doMoveDiagonal9 player)
+                               (GHC.Base.++
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                                  (Moves.doMoveRow board Moves.doMoveDiagonal8 player)
+                                  (GHC.Base.++
+                                     @ (GHC.Base.Maybe
+                                          (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                                     (Moves.doMoveDiagonal1 board player)
+                                     (GHC.Base.++
+                                        @ (GHC.Base.Maybe
+                                             (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                                        (Moves.doMoveDiagonal2 board player)
+                                        (Moves.doMoveEmpty board player))))))))) -}
+3dbe7653c03cb89723c745b9563cd5cc
+  doMoveDiagonal1 ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Char
+    -> [GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 2, Strictness: <S,1*U><L,U(U)>,
+     Unfolding: (\ (board :: [(GHC.Types.Int, GHC.Types.Int,
+                               GHC.Types.Char)])
+                   (player :: GHC.Types.Char) ->
+                 case Moves.findEnemyMovesDiagonal
+                        (Moves.filterDiagonal1 board)
+                        player of wild {
+                   []
+                   -> case GHC.List.badHead
+                      ret_ty [GHC.Base.Maybe
+                                (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+                      of {}
+                   : x ds1
+                   -> case x of wild1 { GHC.Types.I# x1 ->
+                      case x1 of wild2 {
+                        DEFAULT
+                        -> GHC.Types.[]
+                             @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                        2#
+                        -> case GHC.List.$wlenAcc @ GHC.Types.Int ds1 0# of ww2 {
+                             DEFAULT
+                             -> GHC.Types.[]
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                             2#
+                             -> GHC.Types.:
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                                  (GHC.Base.Just
+                                     @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                                     (let {
+                                        m :: [GHC.Types.Int]
+                                        = Data.OldList.\\
+                                            @ GHC.Types.Int
+                                            GHC.Classes.$fEqInt
+                                            Moves.doMoveDiagonal5
+                                            ds1
+                                      } in
+                                      case GHC.List.$wlenAcc @ GHC.Types.Int m 0# of ww1 {
+                                        DEFAULT -> Moves.doMoveDiagonal4
+                                        1#
+                                        -> let {
+                                             x2 :: GHC.Types.Int
+                                             = case m of wild3 {
+                                                 [] -> GHC.List.badHead @ GHC.Types.Int
+                                                 : x3 ds2 -> x3 }
+                                           } in
+                                           (x2,
+                                            case x2 of wild3 { GHC.Types.I# y ->
+                                            GHC.Types.I# (GHC.Prim.-# 2# y) },
+                                            player) }))
+                                  (GHC.Types.[]
+                                     @ (GHC.Base.Maybe
+                                          (GHC.Types.Int, GHC.Types.Int,
+                                           GHC.Types.Char))) } } } }) -}
+abbfc8470efd7e40be172833a20a0a9c
+  doMoveDiagonal10 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+fbc96f6c9774859e0ec8c9220dc8823f
+  doMoveDiagonal2 ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Char
+    -> [GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 2, Strictness: <S,1*U><L,U(U)>,
+     Unfolding: (\ (board :: [(GHC.Types.Int, GHC.Types.Int,
+                               GHC.Types.Char)])
+                   (player :: GHC.Types.Char) ->
+                 case Moves.findEnemyMovesDiagonal
+                        (Moves.filterDiagonal2 board)
+                        player of wild {
+                   []
+                   -> case GHC.List.badHead
+                      ret_ty [GHC.Base.Maybe
+                                (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+                      of {}
+                   : x ds1
+                   -> case x of wild1 { GHC.Types.I# x1 ->
+                      case x1 of wild2 {
+                        DEFAULT
+                        -> GHC.Types.[]
+                             @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                        2#
+                        -> case GHC.List.$wlenAcc @ GHC.Types.Int ds1 0# of ww2 {
+                             DEFAULT
+                             -> GHC.Types.[]
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                             2#
+                             -> GHC.Types.:
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                                  (GHC.Base.Just
+                                     @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                                     (let {
+                                        m :: [GHC.Types.Int]
+                                        = Data.OldList.\\
+                                            @ GHC.Types.Int
+                                            GHC.Classes.$fEqInt
+                                            Moves.doMoveDiagonal5
+                                            ds1
+                                      } in
+                                      case GHC.List.$wlenAcc @ GHC.Types.Int m 0# of ww1 {
+                                        DEFAULT -> Moves.doMoveDiagonal4
+                                        1#
+                                        -> let {
+                                             x2 :: GHC.Types.Int
+                                             = case m of wild3 {
+                                                 [] -> GHC.List.badHead @ GHC.Types.Int
+                                                 : x3 ds2 -> x3 }
+                                           } in
+                                           (x2,
+                                            case x2 of wild3 { GHC.Types.I# y ->
+                                            GHC.Types.I# (GHC.Prim.-# 2# y) },
+                                            player) }))
+                                  (GHC.Types.[]
+                                     @ (GHC.Base.Maybe
+                                          (GHC.Types.Int, GHC.Types.Int,
+                                           GHC.Types.Char))) } } } }) -}
+111d0045cf9d4cb15bbdb85eac9ccd9f
+  doMoveDiagonal4 :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+  {- Strictness: x -}
+1da32983b98ccf28534d56565c9618ad
+  doMoveDiagonal5 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Moves.doMoveDiagonal10
+                   Moves.doMoveDiagonal6) -}
+7eb8273231e0f38f24f7d6e6463ac1fb
+  doMoveDiagonal6 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Moves.doMoveDiagonal9
+                   Moves.doMoveDiagonal7) -}
+1c6d775ede6fe06eb46548d030e7eb9f
+  doMoveDiagonal7 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Moves.doMoveDiagonal8
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+8b29093ef84dde5f6cdbc0be767a9a60
+  doMoveDiagonal8 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+ea84b0fe6ffd1cd0c6e01e79416ef10a
+  doMoveDiagonal9 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+8c7adee8a877615f19d0dffbd44ccf88
+  doMoveEmpty ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Char
+    -> [GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (board :: [(GHC.Types.Int, GHC.Types.Int,
+                               GHC.Types.Char)])
+                   (player :: GHC.Types.Char) ->
+                 GHC.Base.map
+                   @ (GHC.Types.Int, GHC.Types.Int)
+                   @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                   (\ (ds :: (GHC.Types.Int, GHC.Types.Int)) ->
+                    case ds of wild { (,) x y ->
+                    GHC.Base.Just
+                      @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                      (x, y, player) })
+                   (Data.OldList.\\
+                      @ (GHC.Types.Int, GHC.Types.Int)
+                      Moves.$s$fEq(,)
+                      Moves.doMoveEmpty2
+                      (GHC.Base.map
+                         @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                         @ (GHC.Types.Int, GHC.Types.Int)
+                         Moves.doMoveEmpty1
+                         board))) -}
+680dcd6373508a0402e227ee90e4764e
+  doMoveEmpty1 ::
+    (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+    -> (GHC.Types.Int, GHC.Types.Int)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                 case ds of wild { (,,) x y ds1 -> (x, y) }) -}
+5fea0cbfb6f635b4a524f5b3e188b942
+  doMoveEmpty2 :: [(GHC.Types.Int, GHC.Types.Int)]
+  {- Unfolding: (Moves.doMoveEmpty_go 0#) -}
+10cfc69250b28820eab2f32d8a25f4f1
+  doMoveEmpty_go :: GHC.Prim.Int# -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 1, Strictness: <L,U> -}
+42a71a831f10d80c3835baad97ac39bb
+  doMoveLine ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Int
+    -> GHC.Types.Char
+    -> [GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 3, Strictness: <S,1*U><L,U(U)><L,U(U)>,
+     Unfolding: (\ (board :: [(GHC.Types.Int, GHC.Types.Int,
+                               GHC.Types.Char)])
+                   (line :: GHC.Types.Int)
+                   (player :: GHC.Types.Char) ->
+                 case Moves.findEnemyMovesLine
+                        (Moves.filterLine board line)
+                        player of wild {
+                   []
+                   -> case GHC.List.badHead
+                      ret_ty [GHC.Base.Maybe
+                                (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+                      of {}
+                   : x ds1
+                   -> case x of wild1 { GHC.Types.I# x1 ->
+                      case x1 of wild2 {
+                        DEFAULT
+                        -> GHC.Types.[]
+                             @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                        2#
+                        -> case GHC.List.$wlenAcc @ GHC.Types.Int ds1 0# of ww2 {
+                             DEFAULT
+                             -> GHC.Types.[]
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                             2#
+                             -> GHC.Types.:
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                                  (GHC.Base.Just
+                                     @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                                     (line, Moves.giveMove wild, player))
+                                  (GHC.Types.[]
+                                     @ (GHC.Base.Maybe
+                                          (GHC.Types.Int, GHC.Types.Int,
+                                           GHC.Types.Char))) } } } }) -}
+77959413997461cf92e32e7592afdbcd
+  doMoveRow ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Int
+    -> GHC.Types.Char
+    -> [GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 3, Strictness: <S,1*U><L,U(U)><L,U(U)>,
+     Unfolding: (\ (board :: [(GHC.Types.Int, GHC.Types.Int,
+                               GHC.Types.Char)])
+                   (row :: GHC.Types.Int)
+                   (player :: GHC.Types.Char) ->
+                 case Moves.findEnemyMovesDiagonal
+                        (Moves.filterRow board row)
+                        player of wild {
+                   []
+                   -> case GHC.List.badHead
+                      ret_ty [GHC.Base.Maybe
+                                (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+                      of {}
+                   : x ds1
+                   -> case x of wild1 { GHC.Types.I# x1 ->
+                      case x1 of wild2 {
+                        DEFAULT
+                        -> GHC.Types.[]
+                             @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                        2#
+                        -> case GHC.List.$wlenAcc @ GHC.Types.Int ds1 0# of ww2 {
+                             DEFAULT
+                             -> GHC.Types.[]
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                             2#
+                             -> GHC.Types.:
+                                  @ (GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char))
+                                  (GHC.Base.Just
+                                     @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                                     (Moves.giveMove wild, row, player))
+                                  (GHC.Types.[]
+                                     @ (GHC.Base.Maybe
+                                          (GHC.Types.Int, GHC.Types.Int,
+                                           GHC.Types.Char))) } } } }) -}
+aa043c73870c87fb13a5df82b5a115c4
+  filterDiagonal1 ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (board :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]) ->
+                 GHC.Base.build
+                   @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                   (\ @ b
+                      (c :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                            -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                      @ b
+                      (GHC.List.filterFB
+                         @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                         @ b
+                         c
+                         Moves.filterDiagonal5)
+                      n
+                      board)) -}
+510c024ae73bea1240d19c6f68738a03
+  filterDiagonal2 ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (board :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]) ->
+                 GHC.Base.build
+                   @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                   (\ @ b
+                      (c :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                            -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                      @ b
+                      (GHC.List.filterFB
+                         @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                         @ b
+                         c
+                         Moves.filterDiagonal4)
+                      n
+                      board)) -}
+fce78ae46939e1ecc66251a84670a689
+  filterDiagonal4 ::
+    (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char) -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(S)S(S)L),1*U(1*U(U),1*U(U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                 case ds of wild { (,,) x y ds1 ->
+                 case y of wild1 { GHC.Types.I# x1 ->
+                 case x of wild2 { GHC.Types.I# y1 ->
+                 case GHC.Prim.+# x1 y1 of wild3 {
+                   DEFAULT -> GHC.Types.False 2# -> GHC.Types.True } } } }) -}
+65bedfa691ec24b14a0afd32ac55a561
+  filterDiagonal5 ::
+    (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char) -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(S)S(S)L),1*U(1*U(U),1*U(U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                 case ds of wild { (,,) x y ds1 -> GHC.Classes.eqInt y x }) -}
+b10596b8ab55c28cc44f924ed05cdc5c
+  filterEnemyMoves ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Char
+    -> [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (line :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)])
+                   (player :: GHC.Types.Char) ->
+                 GHC.Base.build
+                   @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                   (\ @ b
+                      (c :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                            -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                      @ b
+                      (GHC.List.filterFB
+                         @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                         @ b
+                         c
+                         (\ (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                          case ds of wild { (,,) ds1 ds2 p -> GHC.Classes.neChar p player }))
+                      n
+                      line)) -}
+4d0cef2fffeb175f629d0d0ab09730ba
+  filterLine ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (board :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)])
+                   (lineNo :: GHC.Types.Int) ->
+                 GHC.Base.build
+                   @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                   (\ @ b
+                      (c :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                            -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                      @ b
+                      (GHC.List.filterFB
+                         @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                         @ b
+                         c
+                         (\ (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                          case ds of wild { (,,) x ds1 ds2 -> GHC.Classes.eqInt x lineNo }))
+                      n
+                      board)) -}
+0306e692243bd9d8392dea4a04a5bc4e
+  filterRow ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (board :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)])
+                   (rowNo :: GHC.Types.Int) ->
+                 GHC.Base.build
+                   @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                   (\ @ b
+                      (c :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                            -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                      @ b
+                      (GHC.List.filterFB
+                         @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                         @ b
+                         c
+                         (\ (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                          case ds of wild { (,,) ds1 y ds2 -> GHC.Classes.eqInt y rowNo }))
+                      n
+                      board)) -}
+51ce8c784947f485b2b2160df96a88bb
+  findEnemyMovesDiagonal ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Char -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,U(U)>,
+     Unfolding: (\ (diagonal :: [(GHC.Types.Int, GHC.Types.Int,
+                                  GHC.Types.Char)])
+                   (player :: GHC.Types.Char) ->
+                 letrec {
+                   go :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+                         -> [GHC.Types.Int] -> [GHC.Types.Int]
+                     {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+                   = \ (ds :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)])
+                       (eta :: [GHC.Types.Int]) ->
+                     case ds of wild {
+                       [] -> eta
+                       : y ys
+                       -> case y of wild1 { (,,) ds1 ds2 p ->
+                          case p of wild2 { GHC.Types.C# x ->
+                          case player of wild3 { GHC.Types.C# y1 ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.neChar# x y1) of wild4 {
+                            GHC.Types.False -> go ys eta
+                            GHC.Types.True
+                            -> go
+                                 ys
+                                 (GHC.Base.++
+                                    @ GHC.Types.Int
+                                    eta
+                                    (GHC.Types.:
+                                       @ GHC.Types.Int
+                                       ds1
+                                       (GHC.Types.[] @ GHC.Types.Int))) } } } } }
+                 } in
+                 go
+                   diagonal
+                   (GHC.Types.:
+                      @ GHC.Types.Int
+                      (case GHC.List.$wlenAcc
+                              @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                              diagonal
+                              0# of ww2 { DEFAULT ->
+                       GHC.Types.I# ww2 })
+                      (GHC.Types.[] @ GHC.Types.Int))) -}
+bbf5d9ffa3a6fa926230f3ad5e62432e
+  findEnemyMovesLine ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Char -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,U(U)>,
+     Unfolding: (\ (line :: [(GHC.Types.Int, GHC.Types.Int,
+                              GHC.Types.Char)])
+                   (player :: GHC.Types.Char) ->
+                 letrec {
+                   go :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+                         -> [GHC.Types.Int] -> [GHC.Types.Int]
+                     {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+                   = \ (ds :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)])
+                       (eta :: [GHC.Types.Int]) ->
+                     case ds of wild {
+                       [] -> eta
+                       : y ys
+                       -> case y of wild1 { (,,) ds1 ds2 p ->
+                          case p of wild2 { GHC.Types.C# x ->
+                          case player of wild3 { GHC.Types.C# y1 ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.neChar# x y1) of wild4 {
+                            GHC.Types.False -> go ys eta
+                            GHC.Types.True
+                            -> go
+                                 ys
+                                 (GHC.Base.++
+                                    @ GHC.Types.Int
+                                    eta
+                                    (GHC.Types.:
+                                       @ GHC.Types.Int
+                                       ds2
+                                       (GHC.Types.[] @ GHC.Types.Int))) } } } } }
+                 } in
+                 go
+                   line
+                   (GHC.Types.:
+                      @ GHC.Types.Int
+                      (case GHC.List.$wlenAcc
+                              @ (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+                              line
+                              0# of ww2 { DEFAULT ->
+                       GHC.Types.I# ww2 })
+                      (GHC.Types.[] @ GHC.Types.Int))) -}
+3852b4a8fccef7811d6c9fb31741bbec
+  findEnemyMovesRow ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Types.Char -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,U(U)>,
+     Unfolding: (Moves.findEnemyMovesDiagonal) -}
+ca3e18c4729576ab378644951bd9eee0
+  findInDiagonalMove ::
+    [GHC.Types.Int]
+    -> (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+    -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U(U,A,A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (array :: [GHC.Types.Int])
+                   (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                 case ds of wild { (,,) x y p ->
+                 GHC.Base.augment
+                   @ GHC.Types.Int
+                   (\ @ b (c :: GHC.Types.Int -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Int @ b c n array)
+                   (GHC.Types.:
+                      @ GHC.Types.Int
+                      x
+                      (GHC.Types.[] @ GHC.Types.Int)) }) -}
+e44d7c3e171845cc724e37cd2d6a5d81
+  findInLineMove ::
+    [GHC.Types.Int]
+    -> (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+    -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U(A,U,A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (array :: [GHC.Types.Int])
+                   (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                 case ds of wild { (,,) x y p ->
+                 GHC.Base.augment
+                   @ GHC.Types.Int
+                   (\ @ b (c :: GHC.Types.Int -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Int @ b c n array)
+                   (GHC.Types.:
+                      @ GHC.Types.Int
+                      y
+                      (GHC.Types.[] @ GHC.Types.Int)) }) -}
+dde4196d62a6e8332a1ba7b3b5a0e65d
+  findInRowMove ::
+    [GHC.Types.Int]
+    -> (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+    -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U(U,A,A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (array :: [GHC.Types.Int])
+                   (ds :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                 case ds of wild { (,,) x y p ->
+                 GHC.Base.augment
+                   @ GHC.Types.Int
+                   (\ @ b (c :: GHC.Types.Int -> b -> b)[OneShot] (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Int @ b c n array)
+                   (GHC.Types.:
+                      @ GHC.Types.Int
+                      x
+                      (GHC.Types.[] @ GHC.Types.Int)) }) -}
+8d8da46b4fc7eb3806f2a3685282770f
+  giveMove :: [GHC.Types.Int] -> GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [GHC.Types.Int]) ->
+                 case ds of wild {
+                   [] -> Moves.giveMove2
+                   : x rest
+                   -> let {
+                        m :: [GHC.Types.Int]
+                        = Data.OldList.\\
+                            @ GHC.Types.Int
+                            GHC.Classes.$fEqInt
+                            Moves.doMoveDiagonal5
+                            rest
+                      } in
+                      case GHC.List.$wlenAcc @ GHC.Types.Int m 0# of ww2 {
+                        DEFAULT -> Moves.giveMove1
+                        1# -> GHC.List.head @ GHC.Types.Int m } }) -}
+9246b6a0ee5be0c2992fff42c2011f4b
+  giveMove1 :: GHC.Types.Int
+  {- Strictness: x -}
+33a6237acc821912ea665f53ecb595d5
+  giveMove2 :: GHC.Types.Int
+  {- Strictness: x -}
+f65899ad1c0d05b500e4fdd4f992958d
+  giveMoveDiagonal ::
+    [GHC.Types.Int]
+    -> GHC.Types.Char -> (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+  {- Arity: 2, Strictness: <S,1*U><L,U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: [GHC.Types.Int]) (w1 :: GHC.Types.Char) ->
+                 case Moves.$wgiveMoveDiagonal w w1 of ww { (#,,#) ww1 ww2 ww3 ->
+                 (ww1, ww2, ww3) }) -}
+46fb4f68ddfc19a5ca5c4f4c81f9d884
+  giveMoveDiagonal1 :: (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+  {- Strictness: x -}
+"SPEC/Moves $fEq(,) @ Int @ Int" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                            GHC.Types.Int)
+                                                 ($dEq1 :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,) @ GHC.Types.Int @ GHC.Types.Int $dEq $dEq1
+  = Moves.$s$fEq(,)
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

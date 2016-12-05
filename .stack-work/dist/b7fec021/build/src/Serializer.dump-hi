@@ -1,0 +1,93 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 15:04:26.1014944 UTC
+
+interface tic-0.1.0.0-FOxgNA1UeTn1Zc2Sr49vTD:Serializer 8001
+  interface hash: 4be72badacc3e325d87b4f9d7ffc9201
+  ABI hash: 078a71cc669aac2e7c500140f11e63e5
+  export-list hash: 476e619cbff163c92d2bf11abb4b1cf0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 365edb496d38399416a64131c77130e2
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Serializer.serialize
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:GHC.Base dd8044a8d640eee51828c17c476a6ba7
+import  -/  base-4.9.0.0:GHC.Show 0b5845243cb2ec62b57dd6963d276ec6
+import  -/  base-4.9.0.0:Prelude 2d9cd8b0ec3d728f62b734df888d2e34
+03e9a53c9cab9d20515fbc6b524235fc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Serializer.$trModule2
+                   Serializer.$trModule1) -}
+e7d94cd28923e2434c0503df8fcb9de5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Serializer"#) -}
+e45668672e45d220089ec2c157b9f1a8
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "tic-0.1.0.0-FOxgNA1UeTn1Zc2Sr49vTD"#) -}
+bb45b0c971e68b35a94a0cd76b14f9c3
+  serialize ::
+    GHC.Base.Maybe (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)
+    -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (mov :: GHC.Base.Maybe
+                             (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)) ->
+                 case mov of wild {
+                   GHC.Base.Nothing -> Serializer.serialize2
+                   GHC.Base.Just ds
+                   -> case ds of wild1 { (,,) x y v ->
+                      GHC.CString.unpackAppendCString#
+                        "List(List(x, "#
+                        (case x of ww2 { GHC.Types.I# ww3 ->
+                         case GHC.Show.$wshowSignedInt
+                                0#
+                                ww3
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Base.++
+                           @ GHC.Types.Char
+                           (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                           (GHC.CString.unpackAppendCString#
+                              ", y, "#
+                              (case y of ww1 { GHC.Types.I# ww8 ->
+                               case GHC.Show.$wshowSignedInt
+                                      0#
+                                      ww8
+                                      (GHC.Types.[] @ GHC.Types.Char) of ww9 { (#,#) ww10 ww11 ->
+                               GHC.Base.++
+                                 @ GHC.Types.Char
+                                 (GHC.Types.: @ GHC.Types.Char ww10 ww11)
+                                 (GHC.CString.unpackAppendCString#
+                                    ", v, "#
+                                    (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       v
+                                       Serializer.serialize1)) } })) } }) } }) -}
+46f872f2e35df6703b6865bb8a2518bc
+  serialize1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "))"#) -}
+09b3fb42781b6080daa3524df630e1e7
+  serialize2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "List()"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

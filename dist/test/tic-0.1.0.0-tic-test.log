@@ -1,0 +1,19 @@
+Test suite tic-test: RUNNING...
+
+Strategy
+  returns that player 1 won
+  returns move Maybe (1,2,'x') FAILED [1]
+
+Failures:
+
+  test\Spec.hs:14: 
+  1) Strategy returns move Maybe (1,2,'x')
+       expected: Just (1,2,'x')
+        but got: Just (0,2,'o')
+
+Randomized with seed 1067917472
+
+Finished in 0.0010 seconds
+2 examples, 1 failure
+Test suite tic-test: FAIL
+Test suite logged to: dist\test\tic-0.1.0.0-tic-test.log

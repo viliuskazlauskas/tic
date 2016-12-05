@@ -1,0 +1,277 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-01 13:52:31.6286704 UTC
+
+interface tic-0.1.0.0-FOxgNA1UeTn1Zc2Sr49vTD:Parser 8001
+  interface hash: 49153bc863580fca3b0656ee38e128e4
+  ABI hash: 6321d148f6a683dd2066668bea6410af
+  export-list hash: 00001d37240593c85acf59a91e5dfe9f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 365edb496d38399416a64131c77130e2
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Parser.extractValue
+  Parser.parse
+  Parser.parseTuple
+  Parser.parseTuples
+  Parser.readDigit
+  Parser.readKey
+  Parser.readSeparator
+  Parser.readSpace
+  Parser.readValue
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:GHC.Base dd8044a8d640eee51828c17c476a6ba7
+import  -/  base-4.9.0.0:GHC.Err 20faef8829fd13c027d0ee2213637534
+import  -/  base-4.9.0.0:GHC.List 47d436dfb7454bb1883fb4d943e3f389
+import  -/  base-4.9.0.0:Prelude 2d9cd8b0ec3d728f62b734df888d2e34
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+06db0aec0d30a38a2bfc01bf8c4dd9ef
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Parser.$trModule2
+                   Parser.$trModule1) -}
+1249fa6ad949b831d5d00f9dfca9979b
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Parser"#) -}
+fd29910023b34965f7e2858a79777ccf
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "tic-0.1.0.0-FOxgNA1UeTn1Zc2Sr49vTD"#) -}
+2004a71d14454e8b15489595eda166f1
+  $wparseTuple ::
+    GHC.Base.String
+    -> (# (GHC.Types.Int, GHC.Types.Int, GHC.Types.Char),
+          GHC.Base.String #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+0f801ccf2733a9d7290b891b4499ff1c
+  $wreadSpace ::
+    GHC.Base.String -> (# GHC.Types.Char, [GHC.Types.Char] #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+ae6050e9e88c6ae33db60a6a6b487261
+  extractValue ::
+    GHC.Types.Char
+    -> GHC.Types.Char
+    -> GHC.Types.Char
+    -> GHC.Types.Char
+    -> GHC.Types.Char
+    -> GHC.Types.Char
+    -> GHC.Types.Char
+    -> GHC.Types.Char
+  {- Arity: 7,
+     Strictness: <S(S),1*U(U)><S(S),1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)>,
+     Unfolding: InlineRule (7, True, False)
+                (\ (key :: GHC.Types.Char)
+                   (key1 :: GHC.Types.Char)
+                   (value1 :: GHC.Types.Char)
+                   (key2 :: GHC.Types.Char)
+                   (value2 :: GHC.Types.Char)
+                   (key3 :: GHC.Types.Char)
+                   (value3 :: GHC.Types.Char) ->
+                 case key of wild { GHC.Types.C# x ->
+                 case key1 of wild1 { GHC.Types.C# y ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.eqChar# x y) of wild2 {
+                   GHC.Types.False
+                   -> case key2 of wild3 { GHC.Types.C# y1 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.eqChar# x y1) of wild4 {
+                        GHC.Types.False
+                        -> case key3 of wild5 { GHC.Types.C# y2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.eqChar# x y2) of wild6 {
+                             GHC.Types.False -> Parser.extractValue1
+                             GHC.Types.True -> value3 } }
+                        GHC.Types.True -> value2 } }
+                   GHC.Types.True -> value1 } } }) -}
+b28d1213805ebd2e6ccea93eb2cd4380
+  extractValue1 :: GHC.Types.Char
+  {- Strictness: x -}
+24998b252f3d6967c85b729c38438f90
+  parse ::
+    GHC.Base.String -> [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [GHC.Types.Char]) ->
+                 case ds of wild {
+                   [] -> Parser.parse1
+                   : ds1 ds2
+                   -> case ds1 of wild1 { GHC.Types.C# ds3 ->
+                      case ds3 of ds4 {
+                        DEFAULT -> Parser.parse1
+                        'L'#
+                        -> case ds2 of wild2 {
+                             [] -> Parser.parse1
+                             : ds5 ds6
+                             -> case ds5 of wild3 { GHC.Types.C# ds7 ->
+                                case ds7 of ds8 {
+                                  DEFAULT -> Parser.parse1
+                                  'i'#
+                                  -> case ds6 of wild4 {
+                                       [] -> Parser.parse1
+                                       : ds9 ds10
+                                       -> case ds9 of wild5 { GHC.Types.C# ds11 ->
+                                          case ds11 of ds12 {
+                                            DEFAULT -> Parser.parse1
+                                            's'#
+                                            -> case ds10 of wild6 {
+                                                 [] -> Parser.parse1
+                                                 : ds13 ds14
+                                                 -> case ds13 of wild7 { GHC.Types.C# ds15 ->
+                                                    case ds15 of ds16 {
+                                                      DEFAULT -> Parser.parse1
+                                                      't'#
+                                                      -> case ds14 of wild8 {
+                                                           [] -> Parser.parse1
+                                                           : ds17 rest
+                                                           -> case ds17 of wild9 { GHC.Types.C# ds18 ->
+                                                              case ds18 of ds19 {
+                                                                DEFAULT -> Parser.parse1
+                                                                '('#
+                                                                -> GHC.List.reverse1
+                                                                     @ (GHC.Types.Int,
+                                                                        GHC.Types.Int,
+                                                                        GHC.Types.Char)
+                                                                     (Parser.parseTuples
+                                                                        (GHC.Types.[]
+                                                                           @ (GHC.Types.Int,
+                                                                              GHC.Types.Int,
+                                                                              GHC.Types.Char))
+                                                                        rest)
+                                                                     (GHC.Types.[]
+                                                                        @ (GHC.Types.Int,
+                                                                           GHC.Types.Int,
+                                                                           GHC.Types.Char)) } } } } } } } } } } } } } } }) -}
+0a66ae4c825b8de8feb1eb7bec98f21b
+  parse1 :: [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Strictness: x -}
+ff1592594bfac231b85455e1796656a9
+  parseTuple ::
+    GHC.Base.String
+    -> ((GHC.Types.Int, GHC.Types.Int, GHC.Types.Char),
+        GHC.Base.String)
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case Parser.$wparseTuple w of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+7255ad06e28ef4012ca4acc43c18244a
+  parseTuples ::
+    [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+    -> GHC.Base.String
+    -> [(GHC.Types.Int, GHC.Types.Int, GHC.Types.Char)]
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+27acb870157ae6b19d4e587c072e55ec
+  readDigit :: GHC.Types.Char -> GHC.Types.Int
+  {- Arity: 1, Strictness: <S(S),1*U(1*U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: GHC.Types.Char) ->
+                 case ds of wild { GHC.Types.C# ds1 ->
+                 case ds1 of ds2 {
+                   DEFAULT -> Parser.readDigit4
+                   '0'# -> Parser.readDigit3
+                   '1'# -> Parser.readDigit2
+                   '2'# -> Parser.readDigit1 } }) -}
+082442f67f83711fc39a4e2053ace88f
+  readDigit1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+44811339d53d630df211e5ebed8ab1e3
+  readDigit2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+b3630b2483b6002beeb25dbf652dfbc0
+  readDigit3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+35abc56b4fc2ffb9b7f1302e4fb594d0
+  readDigit4 :: GHC.Types.Int
+  {- Strictness: x -}
+67a1e9c1b5507513eae5434c78c595e0
+  readKey :: GHC.Base.String -> (GHC.Types.Char, GHC.Base.String)
+  {- Arity: 1, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: [GHC.Types.Char]) ->
+                 case ds of wild { [] -> Parser.readKey1 : x rest -> (x, rest) }) -}
+0107f9c73065c0b10d776189a1d2b72a
+  readKey1 :: (GHC.Types.Char, GHC.Base.String)
+  {- Strictness: x -}
+08fc1432e62d89cbbd617e88b2adf6a4
+  readSeparator :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: [GHC.Types.Char]) ->
+                 case ds of wild {
+                   [] -> Parser.readSeparator2
+                   : ds1 rest
+                   -> case ds1 of wild1 { GHC.Types.C# ds2 ->
+                      case ds2 of ds3 {
+                        DEFAULT -> Parser.readSeparator2
+                        ')'# -> GHC.Types.: @ GHC.Types.Char Parser.readSeparator1 rest
+                        ','# -> rest } } }) -}
+2d7483c62402c2876ad4c8181b1bbe16
+  readSeparator1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# ')'#) -}
+044164a14b850a80822ff733cc7c53d7
+  readSeparator2 :: GHC.Base.String
+  {- Strictness: x -}
+6b45ae27f743855aa022539f85a9437d
+  readSpace :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case Parser.$wreadSpace w of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ GHC.Types.Char ww1 ww2 }) -}
+925f006b0020fa8c9143e2b63507068b
+  readValue :: GHC.Base.String -> (GHC.Types.Char, GHC.Base.String)
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case w of wild {
+                   [] -> Parser.readValue6
+                   : ds rest
+                   -> case ds of wild1 { GHC.Types.C# ds1 ->
+                      case ds1 of ds2 {
+                        DEFAULT -> Parser.readValue6
+                        '0'# -> (Parser.readValue5, rest)
+                        '1'# -> (Parser.readValue4, rest)
+                        '2'# -> (Parser.readValue3, rest)
+                        'o'# -> (Parser.readValue2, rest)
+                        'x'# -> (Parser.readValue1, rest) } } }) -}
+9e225cdb8ee99b97d1fcdea8930e51d0
+  readValue1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'x'#) -}
+ad48b2380ce15f7339f25b5f7339c2ef
+  readValue2 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'o'#) -}
+d55f6c20bc7271fff7e82602b1d31743
+  readValue3 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '2'#) -}
+79c2960a8d08cc67ff12bc5f8b1399ef
+  readValue4 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '1'#) -}
+e6ae17f4a2ddc1529cb0981935a47c66
+  readValue5 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '0'#) -}
+e7d738816ca8171d018c92d4c9112dcc
+  readValue6 :: (GHC.Types.Char, GHC.Base.String)
+  {- Strictness: x -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
